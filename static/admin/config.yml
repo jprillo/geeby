@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  
+  branch: master
+
+media_folder: src/images
+public_folder: /images
+
+collections:
+  - name: 'index'
+    label: 'Index'
+    folder: 'src/pages/'
+    create: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'About', name: 'about', widget: 'string' }
+      - { label: 'Mission', name: 'mission', widget: 'string' }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "main-pages"}
+    
+  - name: 'about'
+    label: 'About'
+    folder: 'src/pages/about'
+    create: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "main-pages"}
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'services'
+    label: 'Services'
+    folder: 'src/pages/services'
+    create: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "main-pages"}
+      - { label: 'Body', name: 'body', widget: 'markdown' } 
