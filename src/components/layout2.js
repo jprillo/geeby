@@ -1,11 +1,15 @@
 import React from "react"
 import NavBar from "./navbar" 
 
+import {Link} from "gatsby"
+
+
 import "../style/main.scss"
 import facebook from "../images/facebook.png"
 import instagram from "../images/instagram.png"
 import linkedin from "../images/linkedin.png"
 import twitter from "../images/twitter.png"
+import logo from "../images/logo.png"
 
 class Layout extends React.Component {
 
@@ -42,8 +46,13 @@ class Layout extends React.Component {
             <a style={{margin:" 0 20px"}} href="https://twitter.com/vyntradevines " alt= "twitter"><img width= "50px" alt ="twitter" src= {twitter} /> </a>
             <a style={{margin:" 0 20px"}} href="https://linkedin.com/company/vyntrade-importing-and-consulting/" alt= "linkedin"><img width= "50px" alt ="linkedin" src= {linkedin} /> </a>
 
+          </div>  
+          <div className="center v-pad-1" >
+          <Link to="/">
+                    <img width="100px" src= {logo} alt="Vyntrade logo" /> </Link>
           </div>
-          <p style={{color: "white"}}> Vyntrade ©{new Date().getFullYear()}</p>
+         
+      
         </footer>
       
       </div>

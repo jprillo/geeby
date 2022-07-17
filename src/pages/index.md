@@ -1,7 +1,7 @@
 ---
-title: VINEYARD TO TRADE
-about: "VYNTRADE was founded in 2018 to offer consulting to Wine & Spirit Industry Companies."
-mission: "Create and Implement Profitable Business Opportunities in the US Wine Market for ​Wine Producers through Direct Sales Strategies to Key Retail Clients."
+title: Gatsby Starter Blog with Netlify CMS
+about: "A free minimalist static blog with content management system. Easy to set up and customize."
+mission: "A free minimalist static blog with content management system. Easy to set up and customize  "
 date: 2021-05-12
 templateKey: index-page
 ---
