@@ -20,14 +20,15 @@ collections:
       - { label: 'HeroButtonLinkOne', name: 'heroButtonLinkOne', widget: 'string' }
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "main-pages"}
       - {
-              label: Cards,
-              name: cards,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Text, name: text, widget: text },
-      }
+          label: Cards,
+          name: cards,
+          widget: object,
+          fields:
+            [
+              { label: Heading, name: heading, widget: string },
+              { label: Text, name: text, widget: string},
+            ],
+        }
     
   - name: 'about'
     label: 'About'
