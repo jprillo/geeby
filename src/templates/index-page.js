@@ -51,7 +51,7 @@ export default function Home({ data }) {
           <div className="col-4 pad-3em">
           <img className="icon" width="100% "src ={icon1} alt="This is geeby."/>
             <h3>{item.heading}</h3>
-            <p>A free minimalist static blog with content management system. Easy to set up and customize</p>
+            <p>{item.desc}</p>
 
           </div>
           ))}
@@ -139,7 +139,7 @@ export const query = graphql`
         headingTwo
         cards{
           heading
-          text
+          desc
         }
         
    
