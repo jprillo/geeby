@@ -29,6 +29,16 @@ collections:
               { label: Desc, name: desc, widget: string},
             ],
         }
+      - {
+          label: Dependancies,
+          name: dependancies,
+          widget: list,
+          fields:
+            [
+              { label: Title, name: title, widget: string },
+              { label: Desc, name: desc, widget: string},
+            ],
+        }
     
   - name: 'about'
     label: 'About'

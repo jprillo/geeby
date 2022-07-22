@@ -23,4 +23,22 @@ cards:
         tools for every taste and experience level. No matter if you roast your
         own beans or just bought your first french press, you’ll find a gadget
         to fall in love with in our shop. 
+
+dependancies:
+    - title: Speed
+      desc: >
+        We sell green and roasted coffee beans that are sourced directly from independent farmers and farm cooperatives. 
+    - title: Speed
+      desc: >
+        We sell green and roasted coffee beans that are sourced directly from independent farmers and farm cooperatives. 
+    - title: Speed
+      desc: >
+        We sell green and roasted coffee beans that are sourced directly from independent farmers and farm cooperatives. 
+    - title: Speed
+      desc: >
+        We sell green and roasted coffee beans that are sourced directly from independent farmers and farm cooperatives. 
+    - title: Speed
+      desc: >
+        We sell green and roasted coffee beans that are sourced directly from independent farmers and farm cooperatives. 
+    
 ---
