@@ -1,0 +1,23 @@
+.button{   
+    padding: .75em 2em;   
+    &.primary{
+     background: $primary-color; 
+     cursor: pointer;
+     p{
+         color: white;
+     }    
+    }
+    &.secondary{
+     background: inherit; 
+     cursor: pointer;
+     border: 1px solid $primary-color
+     p{
+         color: $primary-color;
+     }    
+    }   
+    @include breakpoint(md){
+     padding: .75em 3em;
+    }
+   
+  
+ }

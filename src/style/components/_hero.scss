@@ -1,0 +1,23 @@
+.hero{
+    height: 100vh;
+    text-align: center;
+    background-color: inherit;
+   padding-top: 22vh;
+    align-items: center;
+    @include breakpoint(md){ 
+        padding: 7vh 0 0 0 ;
+        text-align: left;
+    }
+   
+ 
+}
+
+.hero-image{
+    padding: 0 0 0 5vw;
+}
+.subheading{
+    font-family: $secondary-font;
+   
+    color: white;
+    font-size: clamp(22px, 1.7vw, 40px);
+}

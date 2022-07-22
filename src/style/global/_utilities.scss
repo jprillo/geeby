@@ -1,0 +1,48 @@
+.gap-1em{
+    gap: 1em;
+}
+.pad-3em{
+    padding:  3em;
+}
+.pad-10{
+    padding: 10vh 10vw;
+}
+.pad-5{
+    padding: 5vh 5vw;
+}
+.v-pad-5{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.h-pad-10{
+padding-left: 10vh;
+padding-right: 10vh;
+}
+.v-pad-1{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+.alt-background{
+    background: #1B202B;
+}
+
+
+.vertical-padding{
+    padding:10vh 0;
+}
+
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+
+
+
+.mobile-hide{
+display: none;
+@include breakpoint(md){       
+   display: block;
+}
+}
