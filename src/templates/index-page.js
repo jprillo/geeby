@@ -50,7 +50,7 @@ export default function Home({ data }) {
         
           <div className="col-4 pad-3em">
           <img className="icon" width="100% "src ={icon1} alt="This is geeby."/>
-            <h3>{item.heading}</h3>
+            <h3>{item.title}</h3>
             <p>{item.desc}</p>
 
           </div>
@@ -138,7 +138,7 @@ export const query = graphql`
         heroButtonLinkOne
         headingTwo
         cards{
-          heading
+          title
           desc
         }
         

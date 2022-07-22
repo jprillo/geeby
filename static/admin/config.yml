@@ -25,7 +25,7 @@ collections:
           widget: list,
           fields:
             [
-              { label: Heading, name: heading, widget: string },
+              { label: Title, name: title, widget: string },
               { label: Desc, name: desc, widget: string},
             ],
         }
