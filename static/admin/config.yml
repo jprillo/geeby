@@ -17,6 +17,8 @@ collections:
       - { label: 'HeroButtonCtaOne', name: 'heroButtonCtaOne', widget: 'string' }
       - { label: 'HeroButtonCtaTwo', name: 'heroButtonCtaTwo', widget: 'string' }
       - { label: 'HeadingTwo', name: 'headingTwo', widget: 'string' }
+      - { label: 'HeadingThree', name: 'headingThree', widget: 'string' }
+      - { label: 'HeadingFour', name: 'headingFour', widget: 'string' }
       - { label: 'HeroButtonLinkOne', name: 'heroButtonLinkOne', widget: 'string' }
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "main-pages"}
       - {
@@ -36,6 +38,16 @@ collections:
           fields:
             [
               { label: Title, name: title, widget: string },
+              { label: Desc, name: desc, widget: string},
+            ],
+        }
+      - {
+          label: Reviews,
+          name: reviews,
+          widget: list,
+          fields:
+            [
+              { label: Name, name: name, widget: string },
               { label: Desc, name: desc, widget: string},
             ],
         }

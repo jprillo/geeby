@@ -4,7 +4,9 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layout2'
 import Hero from '../components/hero'
-import Card from '../components/cards'
+import CardOne from '../components/cardOne'
+import CardTwo from '../components/cardTwo'
+import Review from '../components/review'
 
 
 import heroImage from '../images/hero-image.png'
@@ -41,7 +43,7 @@ export default function Home({ data }) {
 
               {h.cards.map((item) => (
 
-                <Card
+                <CardOne
                   title={item.title}
                   desc={item.desc}
                   icon={icon1}
@@ -54,11 +56,11 @@ export default function Home({ data }) {
         </section>
 
         <div className="vertical-padding">
-          <h2>Here is a list of dependancies</h2>
+          <h2>{h.headingThree}</h2>
           <div className="flex center card-container gap-1em">
             {h.dependancies.map((item) => (
 
-              <Card
+              <CardTwo
                 title={item.title}
                 desc={item.desc}
                 icon={icon1}
@@ -70,19 +72,21 @@ export default function Home({ data }) {
         </div>
 
         <section className="vertical-padding">
-          <h2>Here is a list of dependancies</h2>
-          <div className="flex alt-background center h-pad-10">
-            <div className="col-6 pad-5">
-              <img width="50% " src={stars} alt="This is geeby." />
-              <p className="v-pad-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."</p>
-              <img className="icon" width="100% " src={avatar} alt="This is geeby." />
-              <p className="v-pad-1">Joe Blow</p>
-            </div>
-            <div className="col-6 pad-5">
-              <img width="50% " src={stars} alt="This is geeby." />
-              <p className="v-pad-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."</p>
-              <img className="icon" width="100% " src={avatar} alt="This is geeby." />
-              <p className="v-pad-1">Joe Blow</p>
+          <h2>{h.headingFour}</h2>
+          <div className="alt-background center h-pad-10" style={{overflow: "hidden"}}>
+            <div className="flex ">
+            {h.reviews.map((item) => (
+
+<Review
+  name={item.name}
+  desc={item.desc}
+  stars={stars}
+  avatar={avatar}
+/>
+
+))}
+          
+          
             </div>
           </div>
         </section>
@@ -106,12 +110,18 @@ export const query = graphql`
         heroButtonCtaTwo
         heroButtonLinkOne
         headingTwo
+        headingThree
+        headingFour
         cards{
           title
           desc
         }
         dependancies{
           title
+          desc
+        }
+        reviews{
+          name
           desc
         }
         

@@ -5,6 +5,8 @@ subheadingOne: A free minimalist static blog with content management system.
 heroButtonCtaOne: Get the code
 heroButtonCtaTwo: Learn More
 headingTwo: Why you should use Geeby
+headingThree: Here are some of the features
+headingFour: Find out what our customers think
 heroButtonLinkOne: https://github.com
 templateKey: index-page
 cards:
@@ -35,5 +37,11 @@ dependancies:
     desc: Adds the meta data for search engines to read
   - title: "Gatsby Image "
     desc: super fast image generaion
+reviews:
+  - name: Jason Prillo
+    desc: Gatsby.js is a static website generator
+  - name: Sara Perno
+    desc: React is a component based javascript framework
+  
 date: 2021-05-12
 ---

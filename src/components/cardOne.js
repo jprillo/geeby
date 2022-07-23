@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function Card(props) {
+export default function CardOne(props) {
   var type = props.type;
     return (
 
@@ -13,3 +13,4 @@ export default function Card(props) {
 
     )
 }
+
