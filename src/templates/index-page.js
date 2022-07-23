@@ -7,9 +7,9 @@ import Hero from '../components/hero'
 import CardOne from '../components/cardOne'
 import CardTwo from '../components/cardTwo'
 import Review from '../components/review'
+import {getImage } from "gatsby-plugin-image"
 
 
-import heroImage from '../images/hero-image.png'
 import icon1 from '../images/flash.png'
 import stars from '../images/stars.png'
 import avatar from '../images/Avatar.png'
@@ -17,6 +17,7 @@ import avatar from '../images/Avatar.png'
 export default function Home({ data }) {
   const home = data.markdownRemark;
   const h = home.frontmatter;
+  const image = getImage(h.heroImage)
   return (
 
     <div className="main-wrap">
@@ -30,7 +31,7 @@ export default function Home({ data }) {
           headingOne={h.headingOne}
           subheadingOne={h.subheadingOne}
           heroButtonCtaOne={h.heroButtonCtaOne}
-          heroImage={heroImage}
+          heroImage={image}
           heroButtonCtaTwo={h.heroButtonCtaTwo}
           heroButtonLinkOne={h.heroButtonLinkOne}
         />
@@ -109,6 +110,11 @@ export const query = graphql`
         heroButtonCtaOne
         heroButtonCtaTwo
         heroButtonLinkOne
+        heroImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, quality: 100)
+          }
+        }
         headingTwo
         headingThree
         headingFour

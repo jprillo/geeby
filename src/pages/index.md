@@ -8,6 +8,7 @@ headingTwo: Why you should use Geeby
 headingThree: Here are some of the features
 headingFour: Find out what our customers think
 heroButtonLinkOne: https://github.com
+heroImage: ../images/hero-image.png
 templateKey: index-page
 cards:
   - title: Speed
