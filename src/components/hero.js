@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './button.js'
 import { GatsbyImage } from "gatsby-plugin-image"
+import arrow from '../images/arrow.png'
 
 
 export default function Hero(props) {
@@ -21,7 +22,7 @@ export default function Hero(props) {
                 <div className="col-6 button"> 
                      <p >{props.heroButtonCtaTwo}</p>
                 </div>
-          
+          <img className="arrow mobile-hide" width="100% "src ={arrow} alt="This is geeby."/>
             </div>
         </div>
         <div className="col-6 mobile-hide right" >

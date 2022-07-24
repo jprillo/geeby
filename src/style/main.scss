@@ -8,6 +8,14 @@
 @import "components/navbar";
 @import "components/hero";
 
+
+.arrow{
+    position: absolute;
+    width: 5em;
+    left: 43%;
+    bottom: 10vh;
+}
+
 .card-container{
     flex-wrap: wrap;
     justify-content: center;
