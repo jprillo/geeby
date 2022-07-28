@@ -2,8 +2,18 @@
     height: 100vh;
     text-align: center;
     background-color: inherit;
-   padding-top: 22vh;
+ 
     align-items: center;
+    
+h1{
+    color: white;
+    font-size: clamp(55px, 6.5vw, 200px);
+    font-family: $primary-font;
+    line-height: 105%; 
+    text-align: left;
+  
+     
+  }
     @include breakpoint(md){ 
         padding: 7vh 0 0 0 ;
         text-align: left;
@@ -11,7 +21,14 @@
    
  
 }
-
+.pad-top{
+    padding-top: 22vh;
+    @include breakpoint(md){ 
+        padding: 20vh 0 0 0 ;
+       
+    }
+   
+}
 .hero-image{
     padding: 0 0 0 5vw;
 }

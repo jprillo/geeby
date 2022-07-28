@@ -1,6 +1,15 @@
 .gap-1em{
     gap: 1em;
 }
+.gap-2{
+gap: 35px;
+}
+.gap-3em{
+    gap: 3em;
+}
+.gap-5em{
+    gap: 5em;
+}
 .pad-3em{
     padding:  3em;
 }
@@ -21,6 +30,10 @@ padding-right: 10vh;
 .v-pad-1{
     padding-top: 1vh;
     padding-bottom: 1vh;
+}
+.v-pad-10{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 .alt-background{
     background: #1B202B;

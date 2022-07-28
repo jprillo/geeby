@@ -20,7 +20,7 @@ export default function Home({ data }) {
   const image = getImage(h.heroImage)
   return (
 
-    <div className="main-wrap">
+    <div >
       <Helmet>
         <title>Geeby | A Gatsby blog starter with Netlify CMS</title>
         <meta name="description" content={home.frontmatter.headingOne} />
@@ -105,6 +105,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
+        
         headingOne
         subheadingOne
         heroButtonCtaOne
@@ -112,7 +113,7 @@ export const query = graphql`
         heroButtonLinkOne
         heroImage {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, quality: 100)
+            gatsbyImageData(placeholder: BLURRED, quality: 65)
           }
         }
         headingTwo
