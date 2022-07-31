@@ -41,36 +41,7 @@ collections:
       - { label: 'HeroImage', name: heroImage, widget: image }
       - { label: 'HeroButtonLinkOne', name: 'heroButtonLinkOne', widget: 'string' }
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "main-pages"}
-      - {
-          label: Cards,
-          name: cards,
-          widget: list,
-          fields:
-            [
-              { label: Title, name: title, widget: string },
-              { label: Desc, name: desc, widget: string},
-            ],
-        }
-      - {
-          label: Dependancies,
-          name: dependancies,
-          widget: list,
-          fields:
-            [
-              { label: Title, name: title, widget: string },
-              { label: Desc, name: desc, widget: string},
-            ],
-        }
-      - {
-          label: Reviews,
-          name: reviews,
-          widget: list,
-          fields:
-            [
-              { label: Name, name: name, widget: string },
-              { label: Desc, name: desc, widget: string},
-            ],
-        }
+    
     
   - name: 'about'
     label: 'About'
