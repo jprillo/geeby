@@ -78,6 +78,7 @@ p{
 }
 .blog-wrap{
     padding: 20vh 0vw;
+    background-color: $background-color;
    
   
     @include breakpoint(md){ 
