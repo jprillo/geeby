@@ -9,7 +9,8 @@
 @import "components/hero";
 
 .frame-content{
-    background: $primary-color;
+    background: $background-color;
+    color: white;
 }
 .arrow{
     position: absolute;
