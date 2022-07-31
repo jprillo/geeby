@@ -2,15 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import IndexPageTemplate from '../../templates/index-page'
 
-const IndexPagePreview = ({ entry, getAsset }) => {
-  const entryCards = entry.getIn(['data', 'cards'])
-  const cards = entryCards ? entryCards.toJS() : []
-
-  const entryReviews = entry.getIn(['data', 'reviews'])
-  const reviews = entryReviews ? entryReviews.toJS() : []
-
-  const entryDependancies = entry.getIn(['data', 'dependancies'])
-  const dependancies = entryDependancies ? entryDependancies.toJS() : []
+const IndexPagePreview = ({ entry, getAsset}) => {
 
   
     return (
@@ -24,9 +16,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           headingTwo = {entry.getIn(['data', 'headingTwo'])}
           headingThree = {entry.getIn(['data', 'headingThree '])}
           headingFour = {entry.getIn(['data', 'headingFour'])}
-          cards = {{ cards }}
-          dependancies = {{ dependancies }} 
-          reviews = {{ reviews }}
+       
           
     
       />
