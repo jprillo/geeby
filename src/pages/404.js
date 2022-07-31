@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import Layout from '../components/layout2'
+
 // styles
 const pageStyles = {
   color: "#232129",
@@ -27,6 +29,7 @@ const codeStyles = {
 // markup
 const NotFoundPage = () => {
   return (
+    <Layout>
     <main style={pageStyles}>
       <title>Not found</title>
       <h1 style={headingStyles}>Page not found</h1>
@@ -35,7 +38,7 @@ const NotFoundPage = () => {
         <span role="img" aria-label="Pensive emoji">
           😔
         </span>{" "}
-        we couldn’t find what you were looking for.
+        Geeby can't find it dog. That means you fucked up. 
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
@@ -48,6 +51,7 @@ const NotFoundPage = () => {
         <Link to="/">Go home</Link>.
       </p>
     </main>
+    </Layout>
   )
 }
 

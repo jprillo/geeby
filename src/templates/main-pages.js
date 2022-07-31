@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout2.js'
-import background from '../images/hero-background.png'
+
 import "../style/main.scss"
 
 export default function BlogPost({ data }) {
@@ -12,7 +12,7 @@ export default function BlogPost({ data }) {
       <div>
         <Layout>
         <Helmet title={post.frontmatter.title} defer={false} />
-        <div className="pad2" style={{backgroundImage: "url(" + background + ")"}}>
+        <div className="pad-top" >
         <div className="page-container" >
         <h1 >{post.frontmatter.title}</h1>
    

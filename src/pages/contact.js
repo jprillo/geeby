@@ -43,14 +43,14 @@ export default class Index extends React.Component {
       
       <Layout>
  <Helmet>
-        <title>Vyntrade  Contact</title>
-        <meta name="description" content="VYNTRADE was founded in 2018 to offer consulting to Wine & Spirit Industry Companies.​" />
+        <title>Geeby Gatsby Starter | Contact Us</title>
+        <meta name="description" content="Contact Geeby if you dare.​" />
         <meta name="theme-color" content="black" />
       </Helmet>
 
 
 
-        <div >
+        <div className='pad-top' >
         
 
           
