@@ -125,7 +125,7 @@ const IndexPage = ({ data }) => {
           heroButtonCtaTwo = {h.heroButtonCtaTwo}
           heroButtonLinkOne = {h.heroButtonLinkOne}
           image = {image}
-          headingTwo = {h.CardOneheadingTwo} 
+          headingTwo = {h.headingTwo} 
           headingThree = {h.headingThree}
           headingFour = {h.headingFour} 
           cards = {h.cards}
