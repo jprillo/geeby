@@ -14,35 +14,45 @@ import icon1 from '../images/flash.png'
 import stars from '../images/stars.png'
 import avatar from '../images/Avatar.png'
 
-export default function Home({ data }) {
-  const home = data.markdownRemark;
-  const h = home.frontmatter;
-  const image = getImage(h.heroImage)
+// eslint-disable-next-line
+export const IndexPageTemplate = ({   
+  headingOne,
+  subheadingOne,
+  heroButtonCtaOne,
+  heroButtonCtaTwo, 
+  heroButtonLinkOne, 
+  image,
+  headingTwo, 
+  headingThree,
+  headingFour,
+  cards,
+  dependancies, 
+  reviews,
+  helmet
+
+}) => {
+ 
   return (
 
     <div >
-      <Helmet>
-        <title>Geeby | A Gatsby blog starter with Netlify CMS</title>
-        <meta name="description" content={home.frontmatter.headingOne} />
-        <meta name="theme-color" content="black" />
-      </Helmet>
-      <Layout>
-        <Hero
-          headingOne={h.headingOne}
-          subheadingOne={h.subheadingOne}
-          heroButtonCtaOne={h.heroButtonCtaOne}
+     {helmet || ""}
+
+      <Hero
+          headingOne={headingOne}
+          subheadingOne={subheadingOne}
+          heroButtonCtaOne={heroButtonCtaOne}
           heroImage={image}
-          heroButtonCtaTwo={h.heroButtonCtaTwo}
-          heroButtonLinkOne={h.heroButtonLinkOne}
+          heroButtonCtaTwo={heroButtonCtaTwo}
+          heroButtonLinkOne={heroButtonLinkOne}
         />
         <section className="vertical-padding align-center" >
 
           <div>
-            <h2>{h.headingTwo}</h2>
-            <p className="center">{home.frontmatter.about}</p>
+            <h2>{headingTwo}</h2>
+          
             <div className="flex center gap-1em">
 
-              {h.cards.map((item) => (
+              {cards.map((item) => (
 
                 <CardOne
                   title={item.title}
@@ -57,9 +67,9 @@ export default function Home({ data }) {
         </section>
 
         <div className="vertical-padding">
-          <h2>{h.headingThree}</h2>
+          <h2>{headingThree}</h2>
           <div className="flex center card-container gap-1em">
-            {h.dependancies.map((item) => (
+            {dependancies.map((item) => (
 
               <CardTwo
                 title={item.title}
@@ -73,10 +83,10 @@ export default function Home({ data }) {
         </div>
 
         <section className="vertical-padding">
-          <h2>{h.headingFour}</h2>
+          <h2>{headingFour}</h2>
           <div className="alt-background center h-pad-10" style={{overflow: "hidden"}}>
             <div className="flex ">
-            {h.reviews.map((item) => (
+            {reviews.map((item) => (
 
 <Review
   name={item.name}
@@ -93,13 +103,58 @@ export default function Home({ data }) {
         </section>
 
 
-      </Layout>
+   
 
 
 
     </div>
   )
 }
+
+const IndexPage = ({ data }) => {
+  const home = data.markdownRemark;
+  const h = home.frontmatter;
+  const image = getImage(h.heroImage)
+  return (
+
+    <Layout>
+      <IndexPageTemplate
+          headingOne = {h.headingOne}
+          subheadingOne = {h.subheadingOne}
+          heroButtonCtaOne = {h.heroButtonCtaOne}
+          heroButtonCtaTwo = {h.heroButtonCtaTwo}
+          heroButtonLinkOne = {h.heroButtonLinkOne}
+          image = {image}
+          headingTwo = {h.CardOneheadingTwo} 
+          headingThree = {h.headingThree}
+          headingFour = {h.headingFour} 
+          cards = {h.cards}
+          dependancies = {h.dependancies} 
+          reviews = {h.reviews}
+          helmet = {
+            <Helmet titleTemplate="%s | Blog">
+            <title>{`${h.headingOne}`}</title>
+            <meta
+              name="description"
+              content={`${h.subheadingOne}`}
+            />
+          </Helmet>
+          }
+
+      />
+    </Layout>
+  )
+}
+
+export default IndexPage;
+
+
+
+
+
+
+
+
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
