@@ -8,18 +8,18 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   if (data) {
     return (
       <IndexPageTemplate
-          image={getAsset(data.image)}
+          image={getAsset(data.heroImage)}
           headingOne = {data.headingOne}
           subheadingOne = {data.subheadingOne}
           heroButtonCtaOne = {data.heroButtonCtaOne}
           heroButtonCtaTwo = {data.heroButtonCtaTwo}
           heroButtonLinkOne = {data.heroButtonLinkOne}         
-          headingTwo = {data.CardOneheadingTwo} 
+          headingTwo = {data.headingTwo} 
           headingThree = {data.headingThree}
           headingFour = {data.headingFour} 
-          cards = {data.cards || [] }
-          dependancies = {data.dependancies || [] } 
-          reviews = {data.reviews || []}
+          cards = {data.cards || {} }
+          dependancies = {data.dependancies || {} } 
+          reviews = {data.reviews || {}}
     
       />
     )
