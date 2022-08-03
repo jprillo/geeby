@@ -25,22 +25,25 @@ export default function Blog({data}) {
         <Link to = {hslug}>
         <div className="feature-article" style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${h.featuredImage.publicURL}')`}}>
         
-            <h2>{h.title}</h2>
+            <h1>{h.title}</h1>
             <p>{h.description}</p>
+            <div className="tag-flag">
+              hudgkjwc
+            </div>
         </div>
         </Link>
     </div>
     <div className="col-4 column gap-2">
         <Link to ={tslug}>
     <div className="article" style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${f.featuredImage.publicURL}')`}}>
-            <h3>{f.title}</h3>
+            <h2>{f.title}</h2>
             <p>{f.description}</p>
         </div>
         </Link>
 
         <Link to ={fslug}>
         <div className="article" style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${t.featuredImage.publicURL}')`}}>
-        <h3>{t.title}</h3>
+        <h2>{t.title}</h2>
             <p>{t.description}</p>
         </div>
         </Link>

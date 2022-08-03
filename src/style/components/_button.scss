@@ -3,6 +3,12 @@
     &.primary{
      background: $primary-color; 
      cursor: pointer;
+     &:hover{
+        background: $hover-color;
+     }
+     &:active{
+        background: $active-color;
+     }
      p{
          color: white;
      }    

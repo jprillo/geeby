@@ -1,16 +1,16 @@
 ---
 templateKey: blog-post
 title: Mfake title
-featuredImage: ../../images/hero-image.png
+featuredImage: ../../images/hero-background.png
 date: 2016-12-17T15:04:10.000Z
 description: The Coffee Taster’s Flavor Wheel, the official resource used by
   coffee tasters, has been revised for the first time this year.
-featuredimage: /images/2.png
+
 tags:
   - flavor
   - tasting
 ---
-![flavor wheel](/images/2.png "bb")
+![flavor wheel](/img/2.png "bb")
 
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 

@@ -13,11 +13,17 @@ export default function BlogPost({ data }) {
         <Layout>
         <Helmet title={post.frontmatter.title} defer={false} />
         <div className="pad-top" >
-        <div className="page-container" >
+          <div className="flex">
+        <div className="page-container col-9" >
         <h1 >{post.frontmatter.title}</h1>
    
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-       </div></div>
+       </div>
+       <div className="col-3">
+test
+       </div>
+       </div>
+       </div>
         </Layout>
       </div>
   

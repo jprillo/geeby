@@ -5,11 +5,6 @@
 
   
 
-  const activeStyle = {
-      color: 'lightgrey',
-      
-    }
-  
   
   const NavBar = ({ toggleNavbar, isActive }) => {    
       return(
@@ -25,12 +20,12 @@
                   <div >
                       <div  className={` responsive-nav ${isActive ? 'mobile-nav' : ''}`}>
                           <ul className="nav">
-                                     <li><Link  activeStyle={activeStyle} to="/">Home</Link></li>
+                                     <li><Link  active= "active" to="/">Home</Link></li>
                               
-                              <li><Link to="/instructions/" activeStyle={activeStyle} >Instructions</Link></li>
-                              <li><Link to="/about/" activeStyle={activeStyle} >About</Link></li>                              
-                              <li><Link to="/blog/" activeStyle={activeStyle} >Blog</Link></li>
-                              <li><Link to="/contact/" activeStyle={activeStyle} >Contact</Link></li>
+                              <li><Link to="/instructions/" activeClassName="active" >Instructions</Link></li>
+                              <li><Link to="/about/" activeClassName="active" >About</Link></li>                              
+                              <li><Link to="/blog/" activeClassName="active" >Blog</Link></li>
+                              <li><Link to="/contact/" activeClassName="active" >Contact</Link></li>
                            <div style={{marginTop: "-1.75em"}}>
                            <a  href= "https://www.github.com">
     <button className="nav-button">

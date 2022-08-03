@@ -8,6 +8,33 @@
 @import "components/navbar";
 @import "components/hero";
 
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $primary-color; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $hover-color; 
+  }
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:active {
+    background: $active-color; 
+  }
+
+
 .frame-content{
     background: $background-color;
     color: white;
@@ -20,8 +47,27 @@
 }
 .feature-article{
     height: 50vh;
-    border-radius: 50px;
+    border-radius: 0px;
     border: solid 3px $primary-color;
+    position: relative;
+    padding: 2em;
+    background-repeat: no-repeat;
+    h1{
+        font-size: 70px;
+    }
+    h2{
+        font-size: 50px;
+    }
+}
+.tag-flag{
+position: absolute;
+height: 2em;
+width: 200px;
+background: $primary-color;
+bottom: 0;
+right: 0;
+
+
 }
 .article{
     height: 22.5vh;
