@@ -35,6 +35,8 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     `gatsby-transformer-remark`,
+    `gatsby-plugin-netlify-cms-paths`,
+
 
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
