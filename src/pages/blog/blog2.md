@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
 title: Mfake title
-featuredImage: /img/3.png
 date: 2016-12-17T15:04:10.000Z
 description: The Coffee Taster’s Flavor Wheel, the official resource used by
   coffee tasters, has been revised for the first time this year.
+featuredImage: /img/win_20190324_12_08_00_pro.jpg
 featuredimage: /img/3.png
 tags:
   - Culture
