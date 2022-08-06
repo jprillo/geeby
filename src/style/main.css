@@ -621,7 +621,7 @@ p {
 .feature-article {
   height: 50vh;
   border-radius: 50px;
-  border: solid 3px #9B3CE3;
+  border: solid 3px;
 }
 
 .article {

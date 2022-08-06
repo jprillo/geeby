@@ -1,7 +1,9 @@
 import React from "react"
 import Layout from '../../components/layout2'
-import { graphql, Link } from "gatsby"
+import { graphql} from "gatsby"
 import { Helmet } from 'react-helmet'
+
+import BlogArticle from '../../components/blogArticleOne'
 
 
 export default function Blog({data}) {
@@ -12,6 +14,10 @@ export default function Blog({data}) {
     const fslug = d.edges[1].node.fields.slug
     const t = d.edges[2].node.frontmatter
     const tslug = d.edges[2].node.fields.slug
+    const htag = h.tags[0]
+    const otherPosts = d.edges.slice(3)
+
+ 
     
   return <div >
       <Helmet>
@@ -22,31 +28,55 @@ export default function Blog({data}) {
       <Layout>
 <div className="flex gap-2 pad-top ">
     <div className="col-8">
-        <Link to = {hslug}>
-        <div className="feature-article" style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${h.featuredImage.publicURL}')`}}>
-        
-            <h1>{h.title}</h1>
-            <p>{h.description}</p>
-            <div className="tag-flag">
-              hudgkjwc
-            </div>
-        </div>
-        </Link>
+      <BlogArticle
+      width = ""
+      type = "feature"
+      slug = {hslug}
+      tag = {htag}
+      title = {h.title}
+      description = {h.description}
+      featuredImage = {h.featuredImage.publicURL}
+      />
+      <div className="column v-pad-5">
+        <div className="flex wrap gap-2">
+        {otherPosts.map((item) => (
+  <BlogArticle
+  width = "nnn"
+  type = "normal"
+  slug = {item.node.fields.slug}
+  tag = {item.node.frontmatter.tags[0]}
+  title = {item.node.frontmatter.title}
+  description = {item.node.frontmatter.description}
+  featuredImage = {item.node.frontmatter.featuredImage.publicURL}
+  />
+
+))}
+   
+      </div>
+    </div>
     </div>
     <div className="col-4 column gap-2">
-        <Link to ={tslug}>
-    <div className="article" style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${f.featuredImage.publicURL}')`}}>
-            <h2>{f.title}</h2>
-            <p>{f.description}</p>
-        </div>
-        </Link>
+    <BlogArticle
+     width = ""
+      type = "normal"
+      slug = {fslug}
+      tag = {f.tags[0]}
+      title = {f.title}
+      description = {f.description}
+      featuredImage = {f.featuredImage.publicURL}
+      />
 
-        <Link to ={fslug}>
-        <div className="article" style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${t.featuredImage.publicURL}')`}}>
-        <h2>{t.title}</h2>
-            <p>{t.description}</p>
-        </div>
-        </Link>
+<BlogArticle
+    width = ""
+      type = "normal"
+      slug = {tslug}
+      tag = {t.tags[0]}
+      title = {t.title}
+      description = {t.description}
+      featuredImage = {t.featuredImage.publicURL}
+      />
+  
+       
     </div>
 </div>
   </Layout>
@@ -55,8 +85,9 @@ export default function Blog({data}) {
 
 
 export const query = graphql`
+
 query MyQuery {
-    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}}}) {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}}}) {
       edges {
         node {
           id
@@ -66,6 +97,7 @@ query MyQuery {
           frontmatter {
             title
             description
+            tags
             featuredImage {
                 publicURL
              }
