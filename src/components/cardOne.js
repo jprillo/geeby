@@ -1,4 +1,6 @@
 import React from 'react'
+import { GatsbyImage } from "gatsby-plugin-image"
+
 
 
 export default function CardOne(props) {
@@ -6,7 +8,8 @@ export default function CardOne(props) {
     return (
 
         <div className={"col-4 pad-3em " + type}>
-        <img className="icon" width="100% "src ={props.icon} alt="This is geeby."/>
+          <GatsbyImage image={props.icon} alt= {props.alt} />
+     
           <h3>{props.title}</h3>
           <p>{props.desc}</p>
         </div>

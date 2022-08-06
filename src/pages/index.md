@@ -8,20 +8,26 @@ headingTwo: Why you should use Geeby
 headingThree: Here are some of the features
 headingFour: Find out what our customers think
 heroButtonLinkOne: https://github.com
-heroImage: ../images/hero-image.png
+heroImage: /img/hero-image.png
 templateKey: index-page
 cards:
   - title: Speed
+    icon: /img/flash.png
+    alt: this is a lightning bolt
     desc: >
       We sell green and roasted coffee beans that are sourced directly from
       independent farmers and farm cooperatives. 
   - title: Speed
+    icon: /img/cellphone.png
+    alt: this is a cell phone.
     desc: >
       We offer a small, but carefully curated selection of brewing gear and
       tools for every taste and experience level. No matter if you roast your
       own beans or just bought your first french press, you’ll find a gadget to
       fall in love with in our shop. 
   - title: Speed
+    icon: /img/happy-face.png
+    alt: this is a happy face. coding is fun 
     desc: >
       We offer a small, but carefully curated selection of brewing gear and
       tools for every taste and experience level. No matter if you roast your

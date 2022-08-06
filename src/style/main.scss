@@ -52,7 +52,7 @@
     background-position: center;
     display:flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
       
     background-size: 150% 150%;;
     position: relative;
@@ -61,7 +61,7 @@
     transition: all .4s ease-in-out;
     &:hover{     
     background-size: 200% 200%;
-        
+     border-color: white !important;   
     }
     &:hover h1{
        color: rgb(187, 178, 178);
@@ -86,17 +86,33 @@
 }
 .feature{
     height: 60vh;
-    padding: 2em 3em;
+    padding: 1em 1.5em;
+    @include breakpoint(md){ 
+        padding: 2em 3em;
+    }
+  
+   
     h1{
-        font-size: 70px;
+        font-size: 40px;
+        @include breakpoint(md){ 
+            font-size: 70px;
+        }
+
     }
     h2{
         font-size: 50px;
     }
     .tag-flag{
-        padding: .5em 2em;
+        padding: .2em 1em;
+        @include breakpoint(md){
+           
+            padding: .5em 2em;
+        }
         span{
-            font-size: 22px;
+            font-size: 18px;
+            @include breakpoint(md){
+                font-size: 22px;
+            }
         }
     }
    
@@ -122,7 +138,7 @@
     display: none;
    }
     h1{
-        font-size: 50px;
+        font-size: 40px;
     }
     .tag-flag{
         padding: .2em 1em; 

@@ -11,6 +11,8 @@ import {getImage } from "gatsby-plugin-image"
 
 
 import icon1 from '../images/flash.png'
+
+
 import stars from '../images/stars.png'
 import avatar from '../images/Avatar.png'
 
@@ -57,7 +59,8 @@ export const IndexPageTemplate = ({
                 <CardOne
                   title={item.title}
                   desc={item.desc}
-                  icon={icon1}
+                  icon={item.icon.childImageSharp.gatsbyImageData}
+                  alt={item.alt}
                   type="cardOne"
                 />
 
@@ -176,6 +179,12 @@ export const query = graphql`
         headingFour
         cards{
           title
+          icon {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, quality: 65)
+            }
+          }
+          alt
           desc
         }
         dependancies{
