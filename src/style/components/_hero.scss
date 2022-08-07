@@ -2,16 +2,22 @@
     height: 100vh;
     text-align: center;
     background-color: inherit;
- 
+    padding: 25vh 0 0 0 ;
     align-items: center;
+   
     
 h1{
     color: white;
     font-size: clamp(55px, 6.5vw, 200px);
     font-family: $primary-font;
     line-height: 105%; 
-    text-align: left;
-  
+    text-align: center;
+
+    @include breakpoint(md){ 
+       
+        text-align: left;
+    }
+    
      
   }
     @include breakpoint(md){ 
@@ -22,9 +28,9 @@ h1{
  
 }
 .pad-top{
-    padding-top: 22vh;
+    padding-top: 15vh;
     @include breakpoint(md){ 
-        padding: 20vh 0 0 0 ;
+        padding: 22vh 0 0 0 ;
        
     }
    

@@ -19,7 +19,7 @@ export default function Hero(props) {
                     link={props.heroButtonLinkOne}
                     />
                 </div>       
-                <div className="col-6 button"> 
+                <div className="col-6 button mobile-hide"> 
                      <p >{props.heroButtonCtaTwo}</p>
                 </div>
           <img className="arrow mobile-hide" width="100% "src ={arrow} alt="This is geeby."/>

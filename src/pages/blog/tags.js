@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout2";
 
+
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
@@ -11,9 +12,16 @@ const TagsPage = ({
       siteMetadata: { title },
     },
   },
+  usedTags = [
+    "Programing", "Business", "Design", "Culture" , "Humor"
+  ],
+  tagColors = [
+    "#BC0000", "#045B0D", "#051390", "#813C16", "#7D0590"
+  ]
 }) => (
+
   <Layout>
-    <section className="section">
+    <section className="section pad-top">
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">
         <div className="columns">
@@ -22,15 +30,26 @@ const TagsPage = ({
             style={{ marginBottom: "6rem" }}
           >
             <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
+            <div>
               {group.map((tag) => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
+              
+                  <Link className="tag-box"  to={`/tags/${kebabCase(tag.fieldValue)}/`} style={{
+                    backgroundColor: (() => {          
+                      switch (tag.fieldValue) { 
+                        case usedTags[0] :   return tagColors[0];
+                        case usedTags[1] :   return tagColors[1];
+                        case usedTags[2] :   return tagColors[2];
+                        case usedTags[3] :   return tagColors[3];
+                        case usedTags[4] :   return tagColors[4];             
+                        default:      return "lightblue"
+                      }
+                    })()
+                  }}>
+                   {tag.fieldValue} ({tag.totalCount})
                   </Link>
-                </li>
+              
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>

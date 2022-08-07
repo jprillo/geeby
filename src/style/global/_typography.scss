@@ -39,7 +39,7 @@ h1{
 
   h2{
     color: $text-color;    
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     @include breakpoint(md){       
       font-size: 60px;

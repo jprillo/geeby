@@ -1,5 +1,8 @@
 .button{   
-    padding: .75em 2em;   
+    padding: .2em 1em;  
+    @include breakpoint(md){
+        padding: .75em 2em;  
+    }
     &.primary{
      background: $primary-color; 
      cursor: pointer;

@@ -15,7 +15,7 @@ export default function BlogPost({ data }) {
         <div className="pad-top" >
           <div className="flex">
         <div className="page-container col-9" >
-        <h1 >{post.frontmatter.title}</h1>
+        <h1 className="center" >{post.frontmatter.title}</h1>
    
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
        </div>
