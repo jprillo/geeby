@@ -7,7 +7,7 @@ export default function CardOne(props) {
   var type = props.type;
     return (
 
-        <div className={"col-4 pad-3em " + type}>
+        <div className={"card col-4 pad-3em " + type}>
           <GatsbyImage image={props.icon} alt= {props.alt} />
      
           <h3>{props.title}</h3>

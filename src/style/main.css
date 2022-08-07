@@ -653,7 +653,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
 }
-.card-container div {
+.card-container .card {
   min-width: 25vw;
 }
 

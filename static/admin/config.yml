@@ -62,6 +62,8 @@ collections:
             [
               { label: Title, name: title, widget: string },
               { label: Desc, name: desc, widget: string},
+              { label: 'Icon', name: icon, widget: image },
+              { label: Alt, name: alt, widget: string},
             ],
         }
       - {

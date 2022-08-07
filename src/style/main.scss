@@ -194,8 +194,12 @@ p{
 .card-container{
     flex-wrap: wrap;
     justify-content: center;
-    div{
+    .card{
         min-width: 25vw;
+        img{
+            width: 100%;
+           
+        }
     
     }
 }
@@ -204,6 +208,14 @@ p{
 }
 .cardTwo{
     background: #1B202B;
+    text-align: center;
+    div{
+        text-align: center;
+    }
+    img {
+        width: 80px;
+        
+    }
 }
 
 .icon{

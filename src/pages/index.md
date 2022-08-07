@@ -35,20 +35,32 @@ cards:
       fall in love with in our shop. 
 dependancies:
   - title: Gatsby
+    icon: /img/gatsby.png
+    alt: this is a happy face. coding is fun 
     desc: Gatsby.js is a static website generator
   - title: React
+    icon: /img/react.png
+    alt: this is a happy face. coding is fun 
     desc: React is a component based javascript framework
   - title: Netlify
+    icon: /img/netlify.png
+    alt: this is a happy face. coding is fun 
     desc: The content management and ghosting are both through Netlify for free.
   - title: React Helmet
+    icon: /img/sass.png
+    alt: this is a happy face. coding is fun 
     desc: Adds the meta data for search engines to read
   - title: "Gatsby Image "
+    icon: /img/sass.png
+    alt: this is a happy face. coding is fun 
     desc: super fast image generaion
 reviews:
   - name: Jason Prillo
-    desc: Gatsby.js is a static website generator
+    desc: >
+      I was making love to my wife and this Geeby thing showed up. It started watching us. At first I thought this was pretty messed up but after a while it was pretty cool. Now we sleep with the window open in case he comes back. 
   - name: Sara Perno
-    desc: React is a component based javascript framework
+    desc: >
+      Geeby convinced me my husband was cheating. I left him and took a bus to my mothers house. On the way a found a one hundred dollar bill. Turns out he wasnt cheating and is now with Geeby. I do have and extra 100 bucks though.  
   
 date: 2021-05-12
 ---

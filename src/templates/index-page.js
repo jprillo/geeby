@@ -10,8 +10,6 @@ import Review from '../components/review'
 import {getImage } from "gatsby-plugin-image"
 
 
-import icon1 from '../images/flash.png'
-
 
 import stars from '../images/stars.png'
 import avatar from '../images/Avatar.png'
@@ -77,7 +75,8 @@ export const IndexPageTemplate = ({
               <CardTwo
                 title={item.title}
                 desc={item.desc}
-                icon={icon1}
+                icon={item.icon.childImageSharp.gatsbyImageData}
+                alt= {item.alt}
                 type="cardTwo"
               />
 
@@ -162,8 +161,7 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      frontmatter {
-        
+      frontmatter {        
         headingOne
         subheadingOne
         heroButtonCtaOne
@@ -189,6 +187,12 @@ export const query = graphql`
         }
         dependancies{
           title
+          icon {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, quality: 65)
+            }
+          }
+          alt
           desc
         }
         reviews{

@@ -2,7 +2,16 @@ import React from 'react'
 import { Link } from 'gatsby'
 import TagFlag from '../components/tagFlag'
 
-export default function BlogArticle(props) {
+export default function BlogArticle({
+  title, 
+  description,
+  featuredImage,
+  type, 
+  width, 
+  slug,
+  tag
+
+}) {
 
     const usedTags = [
         "Programing", "Business", "Design", "Culture" , "Humor"
@@ -13,10 +22,10 @@ export default function BlogArticle(props) {
    
     return (
 
-        <Link to = {props.slug} className={props.width}>
-        <div className= {"blog-article " + props.type} style={{backgroundImage:  `linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('${props.featuredImage}')`,
+        <Link to = {slug} className={width}>
+        <div className= {"blog-article " + type} style={{backgroundImage:  `linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('${featuredImage}')`,
       borderColor: (() => {          
-        switch (props.tag) { 
+        switch (tag) { 
           case usedTags[0]:   return tagColors[0];
           case usedTags[1]:   return tagColors[1];
           case usedTags[2]: return tagColors[2];
@@ -33,7 +42,7 @@ export default function BlogArticle(props) {
         <div className="column">
           
               <TagFlag
-         tag = {props.tag}
+         tag = {tag}
          color1 = {tagColors[0]}
          color2 = {tagColors[1]}
          color3 = {tagColors[2]}
@@ -49,8 +58,8 @@ export default function BlogArticle(props) {
          />
          </div>
         
-            <h1>{props.title}</h1>
-            <p>{props.description}</p>
+            <h1>{title}</h1>
+            <p>{description}</p>
          
   
         </div>
