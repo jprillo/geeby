@@ -7,7 +7,7 @@ import Hero from '../components/hero'
 import CardOne from '../components/cardOne'
 import CardTwo from '../components/cardTwo'
 import Review from '../components/review'
-import {getImage } from "gatsby-plugin-image"
+
 
 
 
@@ -116,7 +116,7 @@ export const IndexPageTemplate = ({
 const IndexPage = ({ data }) => {
   const home = data.markdownRemark;
   const h = home.frontmatter;
-  const image = getImage(h.heroImage)
+ 
   return (
 
     <Layout>
@@ -126,7 +126,7 @@ const IndexPage = ({ data }) => {
           heroButtonCtaOne = {h.heroButtonCtaOne}
           heroButtonCtaTwo = {h.heroButtonCtaTwo}
           heroButtonLinkOne = {h.heroButtonLinkOne}
-          image = {image}
+          image = {h.heroImage.publicURL}
           headingTwo = {h.headingTwo} 
           headingThree = {h.headingThree}
           headingFour = {h.headingFour} 
@@ -168,9 +168,7 @@ export const query = graphql`
         heroButtonCtaTwo
         heroButtonLinkOne
         heroImage {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, quality: 65)
-          }
+          publicURL
         }
         headingTwo
         headingThree

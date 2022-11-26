@@ -26,7 +26,7 @@ export default function Hero(props) {
             </div>
         </div>
         <div className="col-6 mobile-hide right" >
-        <GatsbyImage image={props.heroImage} alt="this is a hero image" />
+        <img src={props.heroImage} alt="this is a hero image" />
    
         </div> 
       </section>
