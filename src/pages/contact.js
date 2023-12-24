@@ -40,7 +40,7 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      
+
       <Layout>
  <Helmet>
         <title>Geeby Gatsby Starter | Contact Us</title>
@@ -51,9 +51,9 @@ export default class Index extends React.Component {
 
 
         <div className='pad-top' >
-        
 
-          
+
+
             <div >
             <h1>Contact Us</h1>
             <div className='contact'>
@@ -127,29 +127,24 @@ export default class Index extends React.Component {
               </div>
               <div>
                 <div>
-                <p>Dan Nelson</p> 
-                <p>Cell: +1 (813) 335 1295</p>
-                <p>Email: dnelson@vyntrade.com</p>
+
                 </div><br/>
 
                 <div>
-                
 
 
 
-                <p>Steven M. Rowland</p> 
-                <p>Cell: + 1 (240) 994 7565</p>
-                <p>Email: srowland@vyntrade.com</p>
+
                 </div>
-     
 
 
-               
+
+
               </div>
               </div>
             </div>
-        
-          
+
+
         </div>
       </Layout>
     )
